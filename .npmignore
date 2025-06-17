@@ -1,0 +1,9 @@
+# Example .npmignore to exclude dev files
+src/
+tests/
+*.test.ts
+.vscode/
+tsconfig.json
+*.config.js
+.gitignore
+.eslintrc.json
