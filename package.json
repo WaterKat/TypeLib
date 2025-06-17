@@ -1,11 +1,33 @@
 {
   "name": "@aonyxlimited/typelib",
-  "module": "index.ts",
-  "type": "module",
-  "devDependencies": {
-    "@types/bun": "latest"
+  "version": "0.1.1",
+  "publishConfig": {
+    "access": "public"
   },
+  "type": "module",
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./safely": {
+      "types": "./dist/safely/index.d.ts",
+      "default": "./dist/safely/index.js"
+    },
+    "./json": {
+      "types": "./dist/json/index.d.ts",
+      "default": "./dist/json/index.js"
+    },
+    "./experimental": {
+      "types": "./dist/experimental/index.d.ts",
+      "default": "./dist/experimental/index.js"
+    }
+  },
+  "dependencies": {
+    "@types/json-schema": "^7.0.15",
+    "json-schema": "^0.4.0"
   }
 }
