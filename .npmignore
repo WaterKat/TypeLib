@@ -7,3 +7,4 @@ tsconfig.json
 *.config.js
 .gitignore
 .eslintrc.json
+build.ts

@@ -1,5 +1,5 @@
 import type { Assert } from "../general/index.test.js";
-import type { TypeFromJsonSchema } from "./index.js";
+import type { TypeFromJsonSchema } from "./schema.js";
 
 // === Const ===
 type ConstTest = Assert<

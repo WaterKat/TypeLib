@@ -4,7 +4,7 @@ export type Assert<A, B> = A extends B ? B extends A ? "Pass" : ["Fail: B does n
 //const FooTest: FooTest = "Pass" as const;
 
 // MARK: TUPLES
-import type { AsTuple, AppendToTuple, PrependToTuple, First, Last, ReverseTuple } from "./index.js";
+import type { AsTuple, AppendToTuple, PrependToTuple, First, Last, ReverseTuple } from "./tuples.js";
 
 type AsTupleTest = Assert<AsTuple<"a", "b">, ["a", "b"]>; //=>
 const AsTupleTest: AsTupleTest = "Pass" as const;
@@ -26,7 +26,7 @@ const ReverseTupleTest: ReverseTupleTest = "Pass" as const;
 
 
 // MARK: OTHER
-import type { AsValueOptional, UnionToIntersection, LastOfUnion, UnfoldUnionIntoTuple } from "./index.js";
+import type { AsValueOptional, UnionToIntersection, LastOfUnion, UnfoldUnionIntoTuple } from "./utils.js";
 
 type AsValueOptionalTest = Assert<AsValueOptional<{ a: "test" }>, { a: "test" | undefined }>;
 const AsValueOptionalTest: AsValueOptionalTest = "Pass" as const;
